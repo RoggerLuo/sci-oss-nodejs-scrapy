@@ -1,0 +1,41 @@
+{
+  "name": "indexy-crawler-pdf",
+  "version": "1.0.0",
+  "description": "crawler engine",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "mysql2": "^1.5.3",
+    "node-nats-streaming": "0.0.26",
+    "request": "^2.85.0",
+    "scrape-it": "^5.0.3",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "sequelize": "4.17.2",
+    "tcp-ping": "^0.1.1"
+  },
+  "devDependencies": {
+    "eslint": "4.10.0",
+    "eslint-config-egg": "5.1.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "start": "npm install --registry=https://registry.npm.taobao.org --production && node index.js",
+    "dev": "node index.js",
+    "debug": "node --inspect-brk index.js",
+    "lint": "eslint .",
+    "migrate:new": "egg-sequelize migration:create",
+    "migrate:up": "egg-sequelize db:migrate",
+    "migrate:down": "egg-sequelize db:migrate:undo"
+  },
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "shaowin",
+  "license": "MIT"
+}

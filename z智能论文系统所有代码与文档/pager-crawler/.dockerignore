@@ -1,0 +1,20 @@
+.git
+.idea
+.ipynb_checkpoints/*
+/notebooks/*
+/unused/*
+Dockerfile
+.DS_Store
+.gitignore
+README.md
+env.*
+/devops/*
+
+# To prevent storing dev/temporary container data
+*.csv
+/tmp/*
+
+logs/*
+node_modules/*
+show.sh
+startup-code.sh

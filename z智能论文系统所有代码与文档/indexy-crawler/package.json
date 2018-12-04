@@ -1,0 +1,42 @@
+{
+  "name": "indexy-crawler-engine",
+  "version": "1.0.0",
+  "description": "crawler engine",
+  "private": true,
+  "dependencies": {
+    "delay": "2.0.0",
+    "lodash": "4.17.4",
+    "mysql2": "1.4.2",
+    "node-nats-streaming": "0.0.26",
+    "node-schedule": "1.2.5",
+    "p-retry": "1.0.0",
+    "scrape-it": "3.3.3",
+    "scraperjs": "1.2.0",
+    "sequelize": "4.17.2"
+  },
+  "devDependencies": {
+    "eslint": "4.10.0",
+    "eslint-config-egg": "5.1.1"
+  },
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "scripts": {
+    "start": "npm install --registry=https://registry.npm.taobao.org --production && node index.js",
+    "dev": "node index.js",
+    "debug": "node --inspect-brk index.js",
+    "lint": "eslint .",
+    "migrate:new": "egg-sequelize migration:create",
+    "migrate:up": "egg-sequelize db:migrate",
+    "migrate:down": "egg-sequelize db:migrate:undo"
+  },
+  "ci": {
+    "version": "8, 9"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "vector",
+  "license": "MIT"
+}

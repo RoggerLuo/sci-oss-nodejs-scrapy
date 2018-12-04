@@ -1,0 +1,303 @@
+.pull-right {
+  float: right;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.checkStyle {
+  transform: rotate(45deg) scale(1);
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  display: table;
+  width: 5px;
+  height: 8px;
+  border: 2px solid @primary_color;
+  border-top: 0;
+  border-left: 0;
+  content: ' ';
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+.moria-row {
+  margin: @gap_width 0;
+}
+.moria-title {
+  font-size: @font_size_big;
+  color: @font_primary_color;
+  margin: @gap_width 0;
+}
+.moria-sub-title {
+  font-size: @font_size_small;
+  color: @font_sub_color;
+  margin: @gap_width 0;
+}
+.moria-input {
+  // margin: @gap_width 0;
+  height: @input_normal_height;
+  padding: 14px 10px;
+  font-size: @font_size_normal;
+  color: @input_font_color;
+
+  &:hover {
+    border-color: @input_border_color;
+  }
+  &:focus {
+    border-color: @input_border_color;
+    box-shadow: @input_shadow;
+  }
+}
+.moria-btn {
+  padding: 0 @btn_padding;
+  height: @btn_normal_height;
+  font-size: @font_size_small;
+  /*color: @font_sub_color;*/
+  border-color: @border_color;
+
+  &:hover {
+    color: @font_sub_color;
+    border-color: @border_color;
+    background-color: @main_bgc;
+  }
+  &.ant-btn-clicked:after {
+    border-color: @border_color;
+  }
+  &.block-btn {
+    display: block;
+    width: 100%;
+  }
+  &.primary-btn {
+    color: @white_color;
+    border-color: @primary_color;
+    background-color: @primary_color;
+
+    &:hover {
+      border-color: @primary_color_hover;
+      background-color: @primary_color_hover;
+    }
+    &:active, &.active {
+      background-color: @primary_color_active;
+    }
+    &.outline {
+      color: @primary_color;
+      border-color: @primary_color;
+      // background-color: @white_color;
+
+      &:active, &.active, &:hover {
+        color: @primary_color_active;
+        border-color: @primary_color_active;
+        background-color:@white_color;
+      }
+    }
+    &.ant-btn-clicked:after {
+      border-color: @primary_color;
+    }
+  }
+  &.danger-btn {
+    color: @white_color;
+    border-color: @error_color;
+    background-color: @error_color;
+
+    &:hover {
+      // border-color: @primary_color_hover;
+      // background-color: @primary_color_hover;
+      opacity: .6;
+    }
+    &:active, &.active {
+      background-color: @primary_color_active;
+    }
+    &.outline {
+      color: @error_color;
+      border-color: @error_color;
+      // background-color: @white_color;
+
+      &:active, &.active, &:hover {
+        color: @error_color;
+        border-color: @error_color;
+        background-color: transparent;
+      }
+    }
+    &.ant-btn-clicked:after {
+      border-color: @error_color;
+    }
+  }
+  &.small-btn {
+    height: @btn_small_height;
+    font-size: @font_size_small;
+    padding: @btn_padding/2 @btn_padding;
+  }
+  &.outline {
+    background-color: transparent;
+  }
+}
+.moria-checkbox {
+  &.ant-checkbox-wrapper {
+    font-size: @font_size_normal;
+    color: @font_primary_color;
+
+    .ant-checkbox-inner {
+      border-color: @border_color;
+      border-radius: @border_radius;
+      width: @font_size_normal;
+      height: @font_size_normal;
+    }
+    &:hover {
+      .ant-checkbox:not(.ant-checkbox-checked) .ant-checkbox-inner {
+        border-color: @primary_color;
+
+        &:after {
+          .checkStyle()
+        }
+      }
+    }
+    .ant-checkbox {
+      &:not(.ant-checkbox-checked):hover {
+        .ant-checkbox-inner {
+          border-color: @primary_color;
+
+          &:after {
+            .checkStyle()
+          }
+        }
+      }
+      &.ant-checkbox-checked .ant-checkbox-inner {
+        background-color: @primary_color;
+        border-color: @primary_color;
+
+        &:after {
+          top: 2px;
+        }
+      }
+    }
+  }
+}
+.moria-alert {
+  display: block;
+  // text-align: center;
+  font-size: @font_size_small;
+  border-radius: @border_radius;
+  border: @border_style;
+  line-height: 1.5;
+  background: @main_bgc;
+  padding: 5px;
+  color: @font_sub_color;
+
+  &.moria-alert-warning {
+    background: @warning_color;
+  }
+}
+.moria-box {
+  border: @border_style;
+  border-radius: @border_radius;
+  padding: @gap_width;
+  margin: @gap_width auto;
+}
+.moria-link {
+  font-size: @font_size_small;
+  color: @primary_color;
+  // text-decoration: underline;
+  border-bottom: @border_width solid @primary_color;
+
+  &:hover {
+    color: @primary_color_hover;
+    border-bottom-color: @primary_color_hover;
+  }
+}
+.moria-icon {
+  position: relative;
+  display: inline-block;
+  font-size: @icon_size_normal;
+  color: @icon_primary_color;
+
+  &.large-icon {
+    font-size: @icon_size_large;
+
+    &.icon-shanchu {
+      top: 3px;
+    }
+  }
+  &.small-icon {
+    font-size: @icon_size_small;
+  }
+}
+.moria-select {
+  display: inline-block;
+}
+.ant-select {
+  width: 100%;
+
+  .ant-select-selection--single {
+    height: @btn_normal_height;
+  }
+  .ant-select-selection__rendered {
+    line-height: @btn_normal_height;
+  }
+}
+.ant-select-selection {
+  &:hover, &:active, &:focus {
+    .ant-select-selection-selected-value {
+      color: @font_primary_color;
+    }
+  }
+}
+.ant-select-dropdown {
+  .ant-select-dropdown-menu-item-group-title {
+    color: @font_sub_color;
+  }
+  .ant-select-dropdown-menu-item {
+    color: @font_primary_color;
+    white-space: normal;
+
+    &.ant-select-dropdown-menu-item-active {
+      background-color: @primary_color;
+      color: @white_color;
+    }
+  }
+}
+
+.ant-pagination-options {
+  .ant-select {
+    width: inherit;
+  }
+  .ant-select .ant-select-selection--single {
+    height: 28px;
+  }
+  .ant-select .ant-select-selection__rendered {
+    line-height: 28px;
+  }
+}
+
+.moria-table{
+  .ant-table-content{
+    table{
+      background-color:@white_color;
+      border:@border_style;
+      border-right: 0;
+      border-bottom: 0;
+      border-radius:@border_radius;
+    }
+    .ant-table-thead>tr>th{
+      background-color:@white_color;
+    }
+    .ant-table-thead{
+      color:@font_primary_color;
+    }
+    .ant-table-tbody{
+      color:@font_sub_color;
+    }
+    .ant-table-thead>tr>th{
+      white-space: nowrap;
+    }
+    .ant-table-tbody>tr>td{
+      word-break: normal;
+    }
+    .ant-table-tbody>tr>td, .ant-table-thead>tr>th{
+      // padding:@gap_width/2 @gap_width;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@white_color: #fff;
+@primary_color: #6da7ff;
+@primary_color_active:#15b05d;
+@primary_color_hover:#4fcb88;
+@border_color: #e9e9e9;
+@main_bgc: #F5F7FA;
+@some_bgc: #eaf5f2;
+@warning_color: #fffcdc;
+@error_color: #e41212;
+@font_sub_color: #666;
+@font_base_color: #333;
+@font_base_color_light: #ccc;
+@font_sidebar_color: #ccc;
+@font_disabled_color: #c1cac3;
+@font_primary_color: #264740;
+@red: #e41212;
+
+// 状态颜色
+@delayed: #f48d39;
+@queued: #3e5e90;
+@active: @primary_color;
+@canceled: #999;
+@succeed: #34af17;
+@failed: #c61212;
+
+@sidebar_bg: #252a31;
+@sidebar_bg_active: #20252b;
+@sidebar_bg_sub: #20252b;
+@primary-color: @primary_color;
+
+@sidebar_width: 164px;
+@sidebar_width1920: 256px;
+@sidebar_item_h: 58px;
+@sidebar_subItem_h: 39px;
+@font_size_large: 24px;
+@font_size_big: 16px;
+@font_size_normal: 14px;
+@font_size_small:12px;
+
+@header_height: 58px;
+@header_height1920: 88px;
+@nav_height: 38px;
+@header_menu_padding: 0;
+@border_width: 1px;
+@gap_width: 10px;
+
+@border_radius: 2px;
+
+@border_style: @border_width solid @border_color;
+
+@btn_small_height: 32px;
+@btn_normal_height: 32px;
+@btn_big_height: 50px;
+@btn_large_height: 54px;
+@btn_padding: 10px;
+
+@input_normal_height: @btn_normal_height;
+@input_big_height: @btn_big_height;
+@input_placeholder_color:@font_disabled_color;
+@input_font_color: @font_sub_color;
+@input_shadow: 0 0 6px 2px rgba(210,210,210,.3);
+@input_border_color: #bfbfbf;
+
+@icon_size_small: 22px;
+@icon_size_normal: 24px;
+@icon_size_large: 32px;
+@icon_primary_color: @primary_color;
+@icon_sub_color: @font_sub_color;
+
+@env_btn_width: 204px;
+
+@some_content_width: 13rem;
+
+@form_normal_height: 42px;
+@form_lagre_height: 54px;
+
+@checkbox_size: .22rem;
+@radio_size:@checkbox_size;
+
+
+@status_200: #2cbd71;
+@status_300: #fcb400;
+@status_400: #ff7600;
+@status_500: #e70a00;
+
+// ui调整 变量
+@padding-left: 20px;
+@btn-height: 32px;
+@checkbox-row-height: 42px;
+@light-green: #eaf5f2;
+
+@black: #264740;
+@gray-light: #f9f9f9;
+@gray: #8c9895;
+@border-color: #e9e9e9; // 先border 1px, 颜色使用ant-design的
+@green: @primary_color;
+@yellow: #ffc107;
+
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@rem-base: 100;
+@rem-width: 1080;
+@rem-rate: 3;
+@rem-step: 10;
+@rem-min-width: 320;
+@rem-max-width: 1440;
+@rem: `rem = function(a) { return (a/"@{rem-base}"/"@{rem-rate}") + 'rem'; }`;
+
+html{
+  font-size:unit(@rem-base,px);
+}
+body{
+  font-size: ~`rem(32)`;
+}

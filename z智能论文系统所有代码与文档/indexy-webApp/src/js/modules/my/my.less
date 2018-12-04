@@ -1,0 +1,89 @@
+@import '../../frame/var.less';
+@import "../../frame/rem.less";
+
+.my {
+  .nav-header {
+    z-index: 999;
+  }
+  .footer-bar {
+    z-index: 999;
+  }
+  height: 100%;
+  background: #f8f9fa;
+  .content {
+    .rem(margin-top,90);
+  }
+  .icon-renxiang {
+    color: #6da7ff;
+  }
+}
+.about-me {
+  .rem(margin-bottom, 15);
+  .rem(height, 250);
+  .logo {
+    border: 3px solid #ccc;
+    .rem(font-size, 50);
+  }
+  .my-brief {
+    .rem(font-size, 52);
+  }
+  .border {
+    border-bottom: 1px solid #eee;
+  }
+  .my-following {
+    margin-right: 10px;
+  }
+}
+.my-collection {
+  .rem(margin-top, 10);
+  .icon-gouwudai {
+    color: #f3545e;
+  }
+  .icon-shoucang {
+    color: #f9e140;
+  }
+  .icon-shangchuan-copy {
+    color: #8cd06c;
+  }
+}
+.my-note {
+  .rem(margin-top, 10);
+  .icon-shuji {
+    color: #f2ae4b;
+  }
+  .icon-jichuxinxi {
+    color: #6da7ff;
+  }
+}
+.my-wallet {
+  .rem(margin-top, 10);
+  .icon-qianbao {
+    color: #e66a61;
+  }
+}
+.am-list-item .am-list-line .am-list-extra {
+    flex-basis: auto;
+  }
+  .am-list-line {
+    z-index: 0;
+  }
+.concern {
+  .content {
+    .rem(margin-top,90);
+    .am-tabs-top {
+      .rem(width,749);
+    }
+    .am-tabs-tab-bar-wrap {
+      .rem(height,78);
+    }
+    .am-tabs-default-bar-top .am-tabs-default-bar-tab::after {
+      display: none;
+    }
+    //.am-tabs-default-bar-top {
+    //  justify-content: center;
+    //}
+    //.am-tabs-default-bar-content {
+    //  width: 32%;
+    //}
+  }
+}

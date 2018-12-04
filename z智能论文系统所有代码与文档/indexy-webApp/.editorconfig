@@ -1,0 +1,21 @@
+# http://editorconfig.org
+; 注释
+root = true
+
+[*]
+charset = utf-8
+# 缩进风格 space 和 tab
+indent_style = space
+# indent_style 为tab时，index_size不生效，此时tab_width生效
+indent_size = 2
+# lf换行结束，cr回车，crlf回车换行
+end_of_line = lf
+# 最后以空行结尾
+insert_final_newline = true
+# 去掉换行前的空格
+trim_trailing_whitespace = true
+
+# 后缀为md的所有文件遵循的规则
+[*.md]
+insert_final_newline = false
+trim_trailing_whitespace = false

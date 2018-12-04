@@ -1,0 +1,58 @@
+// https://github.com/amfe/article/issues/17
+// 基于阿里的flexible适配方案
+// 设计稿划分为100份，1份等于1a，10a = 1rem
+// 这样整个app宽度为10rem, html对应的字号为75px
+// 对于750的设计稿，换算的rem值为原始设计尺寸 / rem基准值（基准值 = 设计稿尺寸 / 10）
+
+@base-font-size: 75; // 基于设计稿750
+.rem (@property; @values...) {
+  // https://gist.github.com/wangqs1990/8b8f3f30385162b7fae412a558ea8de2
+    @{property}: ~`(function () {
+    var baseFontSize=@{base-font-size};
+    var sizeList = @{values};
+    if (!Array.isArray(sizeList)) {
+    	sizeList = [sizeList];
+    }
+    var rems = [];
+    for (var i = 0; i < sizeList.length; i++) {
+    	rems.push(Math.round(sizeList[i] / baseFontSize * 1000000) / 1000000 + 'rem');
+    }
+    return rems.join(' ');
+  }())`;
+}
+.remImportant (@property; @values...) {
+  // https://gist.github.com/wangqs1990/8b8f3f30385162b7fae412a558ea8de2
+    @{property}: ~`(function () {
+    var baseFontSize=@{base-font-size};
+    var sizeList = @{values};
+    if (!Array.isArray(sizeList)) {
+    	sizeList = [sizeList];
+    }
+    var rems = [];
+    for (var i = 0; i < sizeList.length; i++) {
+    	rems.push(Math.round(sizeList[i] / baseFontSize * 1000000) / 1000000 + 'rem!important');
+    }
+    return rems.join(' ');
+  }())`;
+}
+html{
+  font-size:unit(75,px);
+  height: 100%;
+}
+body{
+  width: 10rem;
+  height: 100%;
+}
+#container {
+  height: 100%;
+}
+.radius8 {
+  .rem(border-radius, @radius8);
+}
+
+// 使用方法
+//.test {
+//  .rem(margin, 10, 0, 10, 20);
+//  .rem(font-size, 176);
+//}
+

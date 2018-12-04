@@ -1,0 +1,536 @@
+@import "../../../node_modules/antd/dist/antd.less";
+@import "./base.less";
+@import '../common/overrideAntd';
+
+@import "~antd/dist/antd.less";
+@import '../common/indexySet';
+
+.red {color: @red}
+.green{color: @primary_color}
+.yellow {
+  color: @yellow;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.col-right-align {
+  text-align: right;
+}
+::selection {background: @primary_color}
+
+:focus {
+  outline-color: @primary_color;
+}
+.primary-btn {
+  background: @primary_color;
+  color: @white_color;
+}
+.default-btn {
+  background: @font_base_color_light;
+  color: @white_color;
+}
+
+.moria-header {
+  height: 70px;
+  line-height: 70px;
+  border-bottom: solid 1px @border_color;
+}
+body {
+  background-color: #f7f9f8;
+}
+.custom-modal {
+  .iconfont {
+    margin-right: 4px;
+  }
+  .c-title {
+    padding: 18px 0;
+    font-size: 14px;
+  }
+}
+// 任务状态
+.delayed {
+  color: @delayed;
+};
+.queued{
+  color: @queued;
+}
+.active{
+   color: @active;
+ }
+.succeed{
+  color: @succeed;
+}
+.canceled{
+  color: @canceled;
+}
+.failure{
+  color: @failed;
+}
+@canceled: #999;
+@succeed: #34af17;
+@failed: #c61212;
+#container,div[data-reactroot], div[data-reactroot]>.ant-layout{
+  height:100%;
+}
+img {
+  vertical-align: middle;
+}
+.timeframe-select-wapper{
+  position: relative;
+  display:inline-block;
+}
+.root-content{
+  height: 70%;
+  overflow:auto;
+  padding:@gap_width * 2;
+  &.ant-layout-content{
+    padding-top: 0;
+  }
+}
+.ant-layout-content{
+  padding:@gap_width * 2;
+  background: @main_bgc;
+}
+.content-box {
+  background: transparent;
+}
+.content-header {
+  background: transparent;
+  border-bottom: @border_style;
+  padding: 0;
+  font-size: 16px;
+  color: @font_base_color;
+  .search-form {
+    text-align: right;
+    .ant-form-item {
+      margin-right: 0;
+    }
+    .ant-form-item-control {
+      line-height: 28px;
+      //margin-bottom: 3px;// 原意是让它与search-btn底部对齐，而事实上取消这个才能对齐
+    }
+    .search-btn {
+      height: 28px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ant-input {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+.content-main  {
+  .search-form {
+    display: flex;
+    justify-content: space-between;
+    .ant-form-item:first-child {
+      width: 100%;
+      .ant-form-item-control-wrapper:first-child {
+        width: 100%;
+        .ant-form-item-control {
+          > div {
+            display: flex;
+            justify-content: space-between
+          }
+        }
+      }
+    }
+  }
+  .search-items {
+
+  }
+  .search-btn-box {
+    margin-right: 0;
+  }
+}
+.content-main {
+  background: #fff;
+  margin-top: 20px;
+}
+#app-header {
+  background-color: @white_color;
+  border-bottom: @border_width solid @border_color;
+  height: @header_height;
+  min-height: 51px;
+  line-height: @header_height;
+  // padding: 0 @gap_width * 2;
+  // padding-left: 0;
+  padding: 0;
+}
+
+.logo-col{
+  height: @header_height;
+  //width: 190px;
+  width: @sidebar_width;
+}
+
+.logo {
+  height: 100%;
+  //width: 190px;
+  width: @sidebar_width;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  display: block;
+  background: #3e5e90;
+}
+
+.moria-logo {
+  margin-left: 40px;
+  width: 98.66px;
+}
+
+.env-col{
+  width: 180px;
+  height: 52px;
+  #env-btn{
+    width: 180px;
+    padding: 0;
+    height: 97%;
+    border-right: 1px solid @border_color;
+    padding: 0 20px;
+  }
+}
+
+.right-col{
+  right: 0;
+  position: absolute;
+  .ant-menu {
+    line-height: @header_height - 1;
+  }
+}
+
+#app-menu {
+  float: right;
+  border: 0;
+
+  .ant-menu-item {
+    border: 0;
+    font-size: 14px;
+    //border-left: 1px solid @border_color;
+    margin: @header_menu_padding auto;
+    color: @font_sub_color;
+
+    .moria-icon{
+      color:@font_sub_color;
+      margin-right: .1rem;
+      font-size: 15px;
+
+      & + .menu-text{
+        vertical-align: top;
+      }
+    }
+
+    &:hover, &:hover .moria-icon {
+      color: @primary_color;
+    }
+  }
+  .username {
+    font-weight: 600;
+    color: @font_primary_color;
+  }
+}
+.sider-menu{
+  background: @sidebar_bg;
+  //color: #eee;
+
+  .icon-navdashboard{
+    min-width: 14px;
+    margin-right: 8px;
+  }
+
+  .sub-menu{
+    .right-icon{
+      margin-left: 55px;
+      font-size: 10px;
+    }
+  }
+  i.iconfont {
+    padding-right: 16px!important;
+  }
+  .menu-link{
+    color: @white_color;
+    display: initial;
+  }
+}
+.ant-menu-dark {
+  .ant-menu-item {
+    height: @sidebar_item_h;
+    line-height: @sidebar_item_h;
+  }
+  .ant-menu-submenu-title {
+    font-size: 16px;
+    height: @sidebar_item_h;
+    line-height: @sidebar_item_h;
+  }
+  .ant-menu-sub {
+    .ant-menu-item {
+      font-size: 12px;
+     height: @sidebar_subItem_h;
+     line-height: @sidebar_subItem_h;
+    }
+  }
+}
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected:not(.sub-menu){
+  border-left: solid 3px @primary_color;
+  font-weight: 600;
+  color: @primary_color;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-selected{
+  background: @sidebar_bg_active;
+}
+
+.ant-menu-dark.ant-menu-inline .ant-menu-item-active{
+  background: #222e3c;
+}
+.ant-menu-dark .ant-menu-item, .ant-menu-dark .ant-menu-item-group-title, .ant-menu-dark .ant-menu-item > a {
+  // 分辨率
+  font-size: 14px;
+}
+.ant-menu-dark {
+  .ant-menu-inline {
+    &.ant-menu-sub {
+      background: @sidebar_bg_sub;
+    }
+  }
+}
+.spin-container {
+  height: 100%;
+}
+.ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 18px;
+  height: 36px;
+  display: -webkit-box; //作为弹性盒子模型显示
+  -webkit-box-orient: vertical;    //设置子元素的排列方式
+  -moz-box-orient: vertical;    //设置子元素的排列方式
+  -webkit-line-clamp:2;    //块元素显示文本行数
+  text-overflow: ellipsis;
+  &:after {
+    //content: "...";
+    //width: 3em;
+    //height: 18px;
+    //background: #fff;
+  }
+}
+.table-summary {
+  min-width: 120px;
+  max-width: 220px;
+}
+.table-art-title {
+  min-width: 120px;
+  max-width: 220px;
+}
+.table-art-tags {
+  min-width: 50px;
+  max-width: 220px;
+}
+.table-art-journal {
+  min-width: 120px;
+  max-width: 220px;
+}
+.table-author {
+  min-width: 80px;
+  max-width: 220px;
+}
+.table-url {
+  min-width: 120px;
+  max-width: 220px;
+}
+/*带border的是主要内容*/
+.main {
+  border: 1px solid @border_color;
+  background-color: white !important;
+  margin-bottom: 20px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.number {
+  margin: auto 3px;
+}
+.ant-table {
+  .time {
+    white-space: nowrap;
+  }
+  .button-group {
+    white-space: nowrap;
+    button {
+      border-color: @primary_color;
+      color: @primary_color;
+      padding: 8px 18px;
+      &~button {
+       margin-left: 6px;
+      }
+    }
+    &.stop {
+      color: @failed;
+      border: 1px  solid @failed;
+    }
+    &[disabled] {
+      color: rgba(0, 0, 0, 0.25);
+      background-color: #f7f7f7;
+      border-color: #d9d9d9;
+    }
+  }
+}
+
+.table-header {
+  margin-bottom: 20px;
+
+  .ant-input-affix-wrapper,
+  .ant-select {
+    width: 200px;
+  }
+}
+
+.anticon.disabled {
+  pointer-events: none;
+  color: #ddd;
+}
+
+.icon-fanhui {
+  color: #999 !important;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+// 任务
+.table-header-btn-group {
+  button {
+    &~button {
+      margin-left: 22px;
+    }
+  }
+}
+.code-box{
+  //width: 550px;
+  position: relative;
+  width: 532px;
+  height: 200px;
+  resize: none;
+  div.jsoneditor {
+    border: 1px solid #d9d9d9;
+  }
+  div.jsoneditor-menu {
+    background-color: #ebebeb;
+    border-bottom: 1px solid #ebebeb
+  }
+  div.jsoneditor-menu a.jsoneditor-poweredBy {
+    display: none;
+  }
+  .ace-jsoneditor .ace_gutter {
+    border-left: 1px solid #d9d9d9;
+  }
+  pre {
+    width: 410px;
+    white-space: pre-wrap;
+  }
+}
+textarea.code-box{
+  padding: 16px 20px;
+}
+.task-modal {
+  textarea {
+    border-color: #d9d9d9;
+  }
+  //.tasks-text {
+  //  padding: 18px 0;
+  //  font-size: 14px;
+  //}
+  .ant-input-number-lg {
+    margin: 0 16px;
+  }
+  .ant-modal-title {
+    font-size: 16px;
+  }
+  .ant-form-item-label {
+    font-size: 14px;
+  }
+  .ant-form-item-label label:after {
+    content: "";
+  }
+  .ant-modal {
+    top: 60px;
+    width: 800px!important;
+  }
+//  覆盖tab样式
+  .ant-tabs-bar {
+    color: #999999;
+    border-bottom: none;
+    margin: 0;
+    //border-bottom: 0;
+  }
+  .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-nav-container {
+    height: 28px;
+  }
+  .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab {
+    text-align: center;
+    border-radius: 0;
+    width: 130.88px;
+    height: 27px;
+    //border: 1px solid #d9d9d9;
+    margin: 0;
+    border-bottom: 1px solid #d9d9d9;
+    padding-top: 2.2px;
+  }
+  .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
+    background: #6da7ff;
+    color: #ffffff;
+    border: 1px solid #6da7ff;
+  }
+  .code-box{
+    width: 752px;
+    height: 400px;
+    div.jsoneditor {
+      border-left: none;
+    }
+  }
+  .remark-box {
+    height: 200px;
+  }
+}
+.filter-state  {
+  width: 140px;
+}
+
+/*进度条*/
+.process-bar {
+  position: relative;
+  width: 68px;
+  display: inline-block;
+}
+.propcess-bg {
+  width: 100%;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  border-radius: @border_radius;
+  background: @white_color;
+  //background: @main_bgc;
+  border: 1px solid @border-color;
+}
+.process-data {
+  //display: inline-block;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  background: @border-color;
+}
+.process-txt {
+  position: relative;
+}
+.addThesis {
+  padding: 0 24px;
+}

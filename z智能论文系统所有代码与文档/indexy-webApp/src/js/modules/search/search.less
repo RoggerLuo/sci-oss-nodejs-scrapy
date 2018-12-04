@@ -1,0 +1,141 @@
+@import "../../frame/rem.less";
+@import '../../frame/var.less';
+.search {
+  .icon-sousuo {
+    .rem(font-size,30);
+    .rem(padding-right,20);
+  }
+  .icon-xiangxia-copy-copy {
+    padding-left: 52%;
+    color: #999999;
+  }
+  background: @background;
+  height: 100%;
+  .search-content {
+    .my-list {
+      .rem(margin-bottom,10);
+      .am-list-line {
+        padding: 0;
+      }
+      .am-list-item {
+        .rem(padding,0,32);
+      }
+    }
+    background: @background;
+    overflow: auto;
+    height: 94%;
+    .loading {
+      display: none;
+      padding-top: 30%;
+    }
+  }
+  .searchbar-container {
+    //height: 6%;
+    // position: fixed;
+    // width: 100%;
+    // top: 0;
+  }
+  .am-search {
+    // position: fixed;
+    // width: 93%;
+    top: 0;
+    z-index: 999;
+    background-color: #5b8ad4;
+    .rem(padding,0,32);
+    .am-search-cancel-show {
+      .rem(font-size,32);
+      color: #fff;
+    }
+    .am-search-synthetic-ph-placeholder {
+      //display: none;
+    }
+  }
+  .key-word {
+    text-align: center;
+    .rem(margin-top,87);
+    .title {
+      .rem(font-size,26);
+      color: #999;
+      .rem(margin-bottom,50);
+    }
+    .class {
+      .rem(font-size,32);
+      display: -webkit-flex; /* Safari */
+      display: flex;
+      justify-content: center;
+      color: #6da7ff;
+      span {
+        .rem(width,188);
+      }
+      .center {
+        border-left: solid 1px #d2d2d2;
+        border-right: solid 1px #d2d2d2;
+      }
+    }
+  }
+  .am-list-header {
+    .rem(padding,22,32);
+    background-color: #fff;
+    .rem(margin-top,10);
+    .rem(font-size,28);
+    color: #999999;
+  }
+  .am-list-footer {
+    .rem(padding,32,32);
+    color: #5b8ad4;
+    .rem(font-size,28);
+    background-color: #fff;
+  }
+  .author {
+    .listview-row {
+      .rem(padding,28,0);
+      .row-title {
+        .rem(font-size,32);
+        padding: 0;
+        color: #333;
+      }
+      .detail {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+        .rem(font-size,26);
+        color: #999;
+        .fans {
+          .rem(padding-right,30);
+        }
+      }
+    }
+  }
+  .articles {
+    .am-list-content {
+      .rem(padding,28,0);
+      .rem(font-size,30);
+      color: #333;
+      white-space: pre-wrap;
+    }
+  }
+  .periodicals {
+    .listview-row {
+      .rem(padding,15,0);
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      .detail {
+        .rem(padding-left,50);
+        .row-title {
+          white-space: pre-wrap;
+          .rem(font-size,32);
+          color: #333;
+        }
+        .row-tag {
+          .rem(font-size,24);
+          color: #fd9a3a;
+          .rem(padding,7);
+          border: solid 1px;
+        }
+      }
+    }
+    img {
+      .rem(width,100);
+      .rem(height,100);
+    }
+  }
+}

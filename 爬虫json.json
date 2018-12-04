@@ -1,0 +1,43 @@
+密码 indexy_mysql_v1
+
+http://www.spkx.net.cn/CN/article/showNewArticle1.do
+
+
+[
+  {
+    "items": {
+      "listItem": "td.J_WenZhang a:nth-child(1)",
+      "data": {
+        "url": {
+          "selector": "",
+          "attr": "href",
+          "convert": "new Function('x' , 'return \"http://www.spkx.net.cn/CN/\" + x.slice(3)')"
+        }
+      }
+    }
+  },
+  {
+    "title": ".J_biaoti_en",
+    "author": {
+      "selector": ".J_author_cn",
+      "convert": " new Function('x' , 'return x')"
+    },
+    "keywords": {
+      "selector": "tr:nth-child(8) td:nth-child(1)",
+      "eq":2,
+      "convert": "x => x.slice(-10)"
+      
+    },
+    "summary": {
+      "selector": ".J_author_cn",
+      "convert": " new Function('x' , 'return x')"
+    },
+    "publishTime": {
+      "selector": ".J_author_cn",
+      "convert": "new Function('x' , 'return new Date()')"
+    }
+  }
+]
+
+
+"convert": " new Function('x' , 'return x')"

@@ -1,0 +1,111 @@
+@import '../../frame/var.less';
+@import "../../frame/rem.less";
+.Register,
+.Login {
+  height: 100%;
+  background-color: @white;
+  .Register-content,
+  .Login-content {
+    .rem(margin-top,90);
+    .placeholder {
+      color: #CCCCCC;
+      .rem(padding-left,28)
+    }
+    .am-list {
+      text-align: left;
+    }
+    .user-form {
+      position: fixed;
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      justify-content: center;
+      width: 100%;
+      // .rem(padding,0,62);
+      .rem(padding-top,76);
+      // .rem(height,462);
+      text-align: center;
+      .am-list-body {
+        border-bottom: none;
+        border-top: none;
+      }
+
+      .am-list-body::before {
+        display: none;
+      }
+      .am-list-item .am-input-control input {
+        .rem(font-size,30);
+        color: #333333;
+      }
+      .am-button-primary {
+        .rem(width,626);
+        .rem(height,78);
+        .rem(margin-top,59);
+        .rem(margin-bottom,40);
+        .rem(line-height,78);
+        span {
+          .rem(font-size,30);
+          color: #ffffff;
+        }
+      }
+      .forget {
+        .rem(font-size,24);
+        color: #999999;
+      }
+      .am-list-item .am-input-extra {
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        justify-content: center;
+        border: solid 1px @primary;
+        .rem(border-radius,5);
+        .rem(width,160);
+        max-height:100%;
+        .rem(height,66);
+      }
+      .extra {
+        color: @primary;
+        //align-self: center;
+        .rem(line-height,68);
+        .rem(font-size,26);
+        //.rem(width,160);
+        //.rem(height,66);
+      }
+    }
+    .other-Login {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      z-index: 0;
+      .rem(margin-bottom, 120);
+      span {
+        .rem(font-size,24);
+        color: #999999;
+      }
+      .other-icon {
+        .rem(padding-top,40);
+        .rem(width,450);
+        margin: auto;
+        display: -webkit-flex; /* Safari */
+        display: flex;
+        justify-content: space-around;
+        .icon-QQ {
+          color: #598acf;
+        }
+        .icon-weixin {
+          color: #59b743;
+        }
+        .icon-weibo {
+          color: #ce2c22;
+        }
+        .icon-gongnengyedoubanfanshe {
+          color: #6ab962;
+        }
+        .iconfont {
+          .rem(font-size,108);
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

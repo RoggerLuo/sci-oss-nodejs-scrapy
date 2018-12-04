@@ -1,0 +1,144 @@
+@import "var.less";
+@import "rem.less";
+@import "reset.less";
+
+// 定义一些常见类
+// 如清除浮动.clearfix
+// 溢出展示省略号等
+// 可以作为类引用，也可以在样式中调用看common/app.less的使用
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.ellipse {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+// bootstrap
+.media {
+  overflow: hidden;
+  zoom: 1;
+}
+.media-body {
+  width: 1000px;
+}
+.media-object {
+  display: block;
+  .rem(width, 120);
+  .rem(height, 120);
+}
+.media-left,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.body, body {
+  // background-color: #fff;
+  margin: auto;
+}
+// app头部样式
+.nav-jump {
+  .rem(font-size, 30);
+  color: @light-gray;
+}
+div.nav-header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: @white;
+  background-color: @tab-bar;
+  .rem(font-size,32);
+  .rem(height,88);
+  .NavBar-left {
+    .rem(font-size,36);
+    color: @white;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    align-items: center;
+  }
+  //span {
+  //  color: @white;
+  //  .rem(font-size,36);
+  //  .rem(height,88);
+  //  .rem(line-height,88);
+  //  display: -webkit-flex; /* Safari */
+  //  display: flex;
+  //  align-items: center;
+  //}
+  .am-navbar-title {
+    color: @white;
+  }
+}
+.am-navbar-left-icon {
+  color: @white;
+}
+
+.ibtn {
+  .rem(height, 84);
+  .rem(line-height, 84);
+  color: @light-gray;
+  box-shadow: 0 0 8px #bcbcbe;
+  border: 1px solid @border-color;
+  &.is-active {
+   background: @darkgray;
+    color: #fff;
+  }
+
+  &.ibtn-ghost {
+    color: @default-color;
+    &.is-active {
+      color: @primary;
+      border-color: @primary;
+      background: #fff;
+    }
+  }
+}
+
+.with-footer {
+  width: 100%;
+  height: 100%;
+
+  .footer-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    .am-tab-bar-bar {
+      border-top: none;
+      box-shadow: 0px 2px 8px rgba(204, 204, 204, 0.2);
+    }
+  }
+  .iconfont {
+    .rem(width, 40);
+    .rem(height, 40);
+    .rem(font-size, 40);
+  }
+}
+
+
+.body {
+  overflow: hidden;
+  width: 100%;
+}
+
+.primary-btn {
+  background: @primary;
+}
+
+.am-button.am-button-disabled {
+  background-color: @colorCCC!important;
+}
+a:visited,
+a:focus,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none!important;
+}
